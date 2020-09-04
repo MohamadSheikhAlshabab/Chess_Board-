@@ -2,13 +2,13 @@
 
 ---
 ## import the libraries : numpy, matplotlib:¶
-
+<pre>
 import matplotlib.pyplot as plt
 import numpy as np
-
+</pre>
 ---
 ### Create Class Called ChessBoard:¶
-
+<pre>
 class ChessBoard:
     white = [1,1,1]
     blue = [0,0,1]
@@ -82,9 +82,11 @@ class ChessBoard:
         else:
             ChessBoard.under_attack = False
             return ChessBoard.under_attack
+  </pre>
  ----
 ### create instance for class and test all methods it, and assert them¶
 
+<pre>
 chess=ChessBoard()
 chess.render()
 chess.add_red(4,7)
@@ -93,5 +95,7 @@ assert chess.check_if_under_attack(3,5,4,6) == True #Diagonal check
 assert chess.check_if_under_attack(4,5,4,6) == True #Horizontal check
 assert chess.check_if_under_attack(3,6,4,6) == True # Vertical check
 assert chess.check_if_under_attack(0,0,2,6) == False #Not Under Attack 
+</pre>
+----
 print('All tests passed!!!!!!')
 All tests passed!!!!!!
